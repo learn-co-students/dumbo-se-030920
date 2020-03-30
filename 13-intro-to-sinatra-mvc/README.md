@@ -1,18 +1,6 @@
 Intro to Sinatra & MVC
 ===
 
-## SWBATs
-
-* Explain the MVC pattern and give an example
-* Explain how web frameworks (like Sinatra) use the MVC pattern and why
-* Define 'convention over configuration'
-* Implement one model that inherits from ActiveRecord
-* Implement one controller to route and process requests
-  * Demonstrate how the params hash changes and where the data comes from
-* Implement ERB template and get it to render data from controller and model
-* Practice file structure in Sinatra
-* Identify the connection between REST and CRUD
-
 ## Outline
 
 - [ ] How and why we use the MVC pattern
@@ -34,14 +22,38 @@ Intro to Sinatra & MVC
 ### New!
 
 - *MVC*: 
-  - Model =>
-  - View =>
-  - Controller =>
+  - Model => encapulate some data + behavior; Ruby classes -> that connect to a database
+  - View => what the user sees
+  - Controller => go between between the model and the view
   
   - Why MVC?
+    - keeping our code organized -> helps with debugging; also helps other devs work with our code
+      - less likely to have merge conflicts
+    - separates the dependencies in our code
 
-- *convention over configuration*
+- *convention over configuration*: 
+  - you don't have to make as many decisions
+  - we can write less code to do more work
+  - "Rails Magic"
+  - you have to buy into the opinions of another dev
+
 - *RESTful Routing (REST)*
+  - REpresentational State Transfer
+  - convention for determining the routes in your application
+
+## App Ideas?
+
+Rat Trackr -> show locations for various rats
+Reverse Yelp -> Customer Ratings
+
+Break+Cute Animal reminder: 
+User -< Break
+
+animal_video
+datetime
+length
+category
+
 
 ## Deliverables
 

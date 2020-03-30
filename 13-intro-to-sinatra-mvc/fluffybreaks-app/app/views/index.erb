@@ -1,0 +1,14 @@
+<h1>All Breaks</h1>
+
+<% if 1 == 1 %>
+  <p>true</p>
+<% end %>
+
+<ul>
+  <% @breaks.each do |break_instance| %>
+    <li>
+      <% binding.pry %>
+      <%= break_instance.break_time %>
+    </li>
+  <% end %>
+</ul>

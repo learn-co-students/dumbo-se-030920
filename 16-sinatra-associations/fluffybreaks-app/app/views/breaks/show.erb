@@ -6,7 +6,20 @@
   frameborder="0"></iframe>
 </p>
 
-
+<h4>My Notes</h4>
+<ul>
+  <%# show all the notes for this instance of a break! %>
+  <% @break.notes.each do |note| %>
+    <li>
+      <%# make a link %>
+      <%# when i click the link, it should: %>
+      <%# take me to the show route for the note %>
+      <a href="/notes/<%= note.id %>">
+        <%= note.text %>
+      </a>
+    </li>
+  <% end %>
+</ul>
 
 
 <form method="POST" action='<%= "/breaks/#{@break.id}" %>'>

@@ -1,0 +1,20 @@
+<h1>New Note Form</h1>
+
+<form method="POST" action="/notes">
+  <label for="text">Text</label>
+  <input type="text" name="text" id="text">
+
+  <br>
+  <label for="break_id">Break ID</label>
+  <select name="break_id">
+    <%# loop thru all the breaks in our application %>
+    <% @breaks.each do |break_instance| %>
+      <option value="<%= break_instance.id %>">
+        <%= break_instance.break_time %>
+      </option>
+    <% end %>
+  </select>
+
+  <br>
+  <input type="submit" value="Add a note!">
+</form>

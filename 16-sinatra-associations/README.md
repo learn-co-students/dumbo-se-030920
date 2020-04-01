@@ -8,13 +8,21 @@ Sinatra Relationships
 - Use the `<select>` tag to display a dropdown menu
 
 ## Outline
-- [ ] Review CRUD
-- [ ] Add a second model to our domain
-- [ ] Come up with user stories for our application and see how they can be solved with REST
-- [ ] List the instances related model on the show page for the class that `has_many` of the other class
+- [x] Review CRUD
+- [x] Add a second model to our domain
+- [x] Come up with user stories for our application and see how they can be solved with REST
+- [x] List the instances related model on the show page for the class that `has_many` of the other class
 - [ ] Create the `new` and `create` routes for the other model (with `belongs_to`)
 
 ## Notes
+
+Break -< Note
+
+notes
+text
+break_id
+timestamps
+
 
 ### Controllers in Sinatra
 

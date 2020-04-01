@@ -1,0 +1,38 @@
+<h1>Editing A Break</h1>
+
+<form method="POST" action="<%= "/breaks/#{@break.id}" %>">
+  <input type="hidden" name="_method" value="PATCH">
+
+  <label for="break_time">Break Time</label>
+  <input type="text"
+    name="breakInformation[break_time]"
+    id="break_time"
+    value="<%= @break.break_time %>"
+  >
+
+  <br>
+  <label for="animal_video">Animal Video</label>
+  <input type="text"
+    name="breakInformation[animal_video]"
+    id="animal_video"
+    value="<%= @break.animal_video %>"
+  >
+
+  <br>
+  <label for="length">Length</label>
+  <input type="text"
+    name="breakInformation[length]"
+    id="length"
+    value="<%= @break.length %>"
+  >
+
+  <br>
+  <label for="category">Category</label>
+  <input type="text"
+  value="<%= @break.category %>"
+  name="breakInformation[category]"
+  id="category" >
+
+  <br>
+  <input type="submit" value="Editing the break">
+</form>

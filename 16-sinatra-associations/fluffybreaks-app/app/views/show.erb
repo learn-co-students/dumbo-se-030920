@@ -1,0 +1,21 @@
+<p>Time: <%= @break.break_time %> </p>
+<p>
+  <a href="<%= @break.animal_video %>">Video</a>
+</p>
+<p>Category: <%= @break.category %> </p>
+
+
+
+
+<form method="POST" action='<%= "/breaks/#{@break.id}" %>'>
+  <input type="hidden" name="_method" value="DELETE">
+  
+  <input type="submit" value="Delete this break" />
+</form>
+
+
+<hr>
+
+<a href="/breaks">
+  Take me back to All the Breaks
+</a>

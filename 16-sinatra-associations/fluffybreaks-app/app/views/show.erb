@@ -1,8 +1,10 @@
-<p>Time: <%= @break.break_time %> </p>
-<p>
-  <a href="<%= @break.animal_video %>">Video</a>
-</p>
+<h1><%= @break.break_time %></h1>
 <p>Category: <%= @break.category %> </p>
+<p>
+  <iframe id="ytplayer" type="text/html" width="640" height="360"
+  src="<%= @break.animal_video %>"
+  frameborder="0"></iframe>
+</p>
 
 
 

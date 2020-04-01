@@ -12,14 +12,16 @@ class ApplicationController < Sinatra::Base
   get '/breaks' do
     # model
     @breaks = Break.all
-    # response/redirect
+
+    # render/redirect
     erb :index
   end
 
   # New
   get '/breaks/new' do
     # model
-    # response/redirect
+
+    # render/redirect
     erb :new
   end
 
@@ -27,7 +29,8 @@ class ApplicationController < Sinatra::Base
   post '/breaks' do
     # model
     @break = Break.create(params)
-    # response/redirect
+    
+    # render/redirect
     redirect("/breaks/#{@break.id}")
   end
 
@@ -35,7 +38,8 @@ class ApplicationController < Sinatra::Base
   get '/breaks/:id' do
     # model
     @break = Break.find(params[:id])
-    # response/redirect
+    
+    # render/redirect
     erb(:show)
   end
 
@@ -43,7 +47,8 @@ class ApplicationController < Sinatra::Base
   get '/breaks/:id/edit' do
     # model
     @break = Break.find(params[:id])
-    # response/redirect
+    
+    # render/redirect
     erb :edit
   end
 
@@ -52,7 +57,8 @@ class ApplicationController < Sinatra::Base
     # model
    @break = Break.find(params[:id])
    @break.update(params[:breakInformation])
-   # response/redirect
+   
+   # render/redirect
    redirect("/breaks/#{@break.id}")
   end
 
@@ -61,7 +67,8 @@ class ApplicationController < Sinatra::Base
     # model
     @break = Break.find(params[:id])
     @break.destroy
-    # response/redirect
+    
+    # render/redirect
     redirect "/breaks"
   end
 

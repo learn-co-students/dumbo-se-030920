@@ -1,0 +1,24 @@
+<h1>Log a New Pet Here!</h1>
+
+
+<%# When a form_for takes in a blank instance of a Pet, the form will automatically make a request to POST "/pets" when submitted %>
+<%= form_for @pet do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :age %>
+  <%= f.number_field :age %>
+  <%= f.label :breed %>
+  <%= f.text_field :breed %>
+  <%= f.submit "MAKE A NEW PET" %>
+
+<% end %>
+
+
+<h2>Generic</h2>
+<%= form_tag("/url", method: :delete) do %>
+<% end %>
+
+<h2>Form With</h2>
+<%= form_with(url: "/url") do %>
+<% end %>

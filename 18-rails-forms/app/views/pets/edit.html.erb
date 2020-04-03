@@ -1,0 +1,14 @@
+<h1>Editing <%= @pet.name %> </h1>
+
+<%# When a form_for takes in an instance of a Pet with an ID, the form will automatically make a request to PATCH "/pets/:id" when submitted %>
+
+<%= form_for @pet do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :age %>
+  <%= f.number_field :age %>
+  <%= f.label :breed %>
+  <%= f.text_field :breed %>
+
+  <%= f.submit "EDIT #{@pet.name}" %>
+<% end %>

@@ -11,3 +11,13 @@
 </p>
 
 <%= link_to "Show all Pets", pets_path %>
+<%= link_to "Edit this pet", edit_pet_path(@pet) %>
+
+
+<%= button_to "Send this pet to the farm upstate 1", "/pets/#{@pet.id}", method: :delete %>
+<%= button_to "Send this pet to the farm upstate 2", pet_path(@pet), method: :delete %>
+<%= button_to "Send this pet to the farm upstate 3", @pet, method: :delete %>
+
+
+<%# button_to is a form (should only make non-get requests)%>
+<%# link_to is an a tag (should only make get requests) %>

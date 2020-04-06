@@ -1,0 +1,15 @@
+<h1>Log a New Pet Here!</h1>
+
+
+<%# When a form_for takes in a blank instance of a Pet, the form will automatically make a request to POST "/pets" when submitted %>
+
+<%= render "form" %>
+
+
+<h2>Generic</h2>
+<%= form_tag("/url", method: :delete) do %>
+<% end %>
+
+<h2>Form With</h2>
+<%= form_with(url: "/url") do %>
+<% end %>

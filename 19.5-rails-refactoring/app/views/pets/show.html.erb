@@ -1,0 +1,69 @@
+<h1>
+  <%= @pet.name %>
+</h1>
+
+<p>
+  Age: <%= @pet.age %>
+</p>
+
+<p>
+  Breed: <%= @pet.breed %>
+</p>
+
+
+<h2>Appointments</h2>
+
+<% if @pet.appointments.length == 0 %>
+
+  <p>This pet has no appointments</p>
+
+<% else %>
+
+  <ul>
+    <% @pet.appointments.each do |appointment| %>
+      <li>
+        <%= appointment.time %> with <%= appointment.doctor.name %>
+      </li>
+      <% end %>
+  </ul>
+
+  <% end %>
+
+
+
+<h3>Here is a form to make a new appointment for <%= @pet.name %></h3>
+
+
+
+
+<%= form_for @new_appointment  do |f| %>
+  <%= f.hidden_field :pet_id, value: @pet.id %>
+  <%= f.label :time %>
+  <%= f.text_field :time %>
+  <%= f.label :doctor_id %>
+  <%= f.collection_select :doctor_id, @all_doctors, :id, :name %>
+
+  <%= f.submit %>
+
+<% end %>
+
+
+
+
+
+
+
+
+
+<%= link_to "Make New Appointment", "/appointments/new" %>
+
+<br/>
+
+
+<%= link_to "Show all Pets", pets_path %>
+<%= link_to "Edit this pet", edit_pet_path(@pet) %>
+
+
+<%= button_to "Send this pet to the farm upstate 1", "/pets/#{@pet.id}", method: :delete %>
+<%= button_to "Send this pet to the farm upstate 2", pet_path(@pet), method: :delete %>
+<%= button_to "Send this pet to the farm upstate 3", @pet, method: :delete %>

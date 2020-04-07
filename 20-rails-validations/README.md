@@ -15,13 +15,55 @@ In other words, how do we protect our database from the typical user:
 ![typical-user](https://camo.githubusercontent.com/bd5a0e0355fa6a8c1f5478f197be5562a479d41a/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f5a665531314f44616e6c6f43412f67697068792e676966)
 
 ## Outline
-- [ ] Discuss client vs server side validations
-- [ ] Add a new attribute to our model to practice `rails g migration`
-- [ ] Students brainstorm different kinds of validations
-- [ ] Add validations and review ActiveRecord documentation
-- [ ] Add custom validations
+- [x] Discuss client vs server side validations
+- [x] Add a new attribute to our model to practice `rails g migration`
+- [x] Students brainstorm different kinds of validations
+- [x] Add validations and review ActiveRecord documentation
+- [x] Add custom validations
 - [ ] Use validations in our controller
 - [ ] Render validation error messages
+
+
+
+Our validations
+
+1. validate Pet age, can't be older than 80
+  1a. validate age based on the breed (cat can't be older than 25 * 12 months, dog can't be older than 20 * 12 months)
+2. Pet name can't be more than 20 characters
+3. Pet age must be greater than 4 months
+4. Doctor name can't be blank
+5. Doctor location can't be blank
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Client Side Validation
+- doesn't have to do with the database
+- handling validation directly on the input fields
+- anything that happens BEFORE the request goes to the server
+- PROs: user get immediate feedback
+- CONs: it's kinda easy to hack
+
+Server Side Validation
+- has something to do with our database
+- password validations
+- any data that we're checking on the server (AFTER we get the request)
+- PROs: harder for users to manipulate; we can write more advanced logic to handle validations
+- CONs: it's a little slower for the user to get feedback
+
+
+
+
 
 ### Server Side Validation vs Client Side Validation
 

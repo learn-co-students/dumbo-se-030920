@@ -3,15 +3,28 @@ class PetsController < ApplicationController
 
   def index
     @pets = Pet.all
+    byebug
   end
 
+  # GET /pets/new
   def new
     @pet = Pet.new
+    @errors = flash[:errors]
+    # render :new
   end
 
+  # POST /pets
   def create
-    @pet = Pet.create(pet_params)
-    redirect_to @pet
+    pet = Pet.create(pet_params)
+
+    # if the pet is valid
+    if pet.valid?
+      redirect_to pet
+    else
+      # otherwise give them another chance to fill out the form
+      flash[:errors] = pet.errors.full_messages
+      redirect_to new_pet_path
+    end
   end
 
   def show

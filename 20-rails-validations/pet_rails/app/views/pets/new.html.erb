@@ -1,3 +1,11 @@
 <h1>Log a New Pet Here!</h1>
 
+<% if @errors %>
+  <% @errors.each do |error| %>
+    <p style='color: red'>
+      <%= error %>
+    </p>
+  <% end %>
+<% end %>
+
 <%= render "form" %>

@@ -1,0 +1,15 @@
+<h1>Name: <%= @student.name%></h1>
+
+<h3>Age: <%= @student.age%></h3>
+
+<ul>
+    <%@student.enrollments.each do |enrollment|%>
+        <li><%=enrollment.course.name%></li>
+        <%=button_to "Destroy #{enrollment.course.name}", "/enrollments/#{enrollment.id}", method: :delete%>
+    <%end%>
+
+</ul>
+
+<%=button_to "Destroy #{@student.name}", "/students/#{@student.id}", method: :delete %>
+
+<%= link_to "Register for Course", "/enrollments/new"%>

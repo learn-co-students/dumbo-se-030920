@@ -1,0 +1,20 @@
+<h1>Log a New Appointment</h1>
+
+<%= form_for @appointment do |f| %>
+
+  <%= f.label :time %>
+  <%= f.text_field :time %>
+
+  <%= f.label :doctor_id %>
+  <%= f.collection_select :doctor_id, @doctors, :id, :name %>
+  <%# 1st Argument: what attribute are you choosing for the model in your form_for (oftentimes, this is a foreign key) %>
+  <%# 2nd Argument: what array should we map over/what array holds the information to choose from %>
+  <%# 3rd Argument: What attribute from the 2nd argument do we want in params (oftentimes, this is :id)%>
+  <%# 4th Argument: What do we want the user to see from the 2nd argument %>
+
+  <%= f.label :pet_id %>
+  <%= f.collection_select :pet_id, @pets, :id, :name %>
+
+  <%= f.submit %>
+
+<% end %>

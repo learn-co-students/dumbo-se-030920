@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 1
+  camper: one
+  activity: one
+
+two:
+  time: 1
+  camper: two
+  activity: two

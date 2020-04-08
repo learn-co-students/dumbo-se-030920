@@ -1,0 +1,9 @@
+<h1>All The Campers</h1>
+
+<ul>
+  <% @campers.each do |camper| %>
+    <li><%=link_to camper.name, "/campers/#{camper.id}" %> && <%=link_to camper.name, camper %> </li>
+
+
+  <% end %>
+</ul>

@@ -1,8 +1,9 @@
 class SessionsController < ApplicationController
 
-  def reset_page_views
-    session[:page_views_remaining] = 5
+  def reset_views
+    session[:views_remaining] = 3
 
-    redirect_back fallback_location: doctors_path
+    # response
+    redirect_back(fallback_location: doctors_path)
   end
 end

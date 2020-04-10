@@ -19,5 +19,6 @@ Rails.application.routes.draw do
   post '/appointments', to: 'appointments#create'
   # resources :appointments, only: [:new, :index, :create]
 
+  patch "/sessions/reset_views", to: "sessions#reset_views"
 
 end

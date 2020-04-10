@@ -70,12 +70,12 @@ hr {
   margin: 0 1rem;
 }
 
-.menu .item a,
+.menu a.item,
 .profile a {
   border-bottom: 1px dotted var(--font-color);
 }
 
-.menu .item a:hover,
+.menu a.item:hover,
 .profile a:hover {
   border-bottom: 1px solid var(--font-color);
 }

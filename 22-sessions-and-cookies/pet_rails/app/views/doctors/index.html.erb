@@ -1,0 +1,23 @@
+<%= render "shared/heading", title: "Find a Doctor" %>
+
+<ul class="doctor-list">
+  <% @doctors.each do |doctor| %>
+    <li class="doctor-list__item">
+      <div class="doctor-list__image">
+        <%= image_tag doctor.image_url %>
+      </div>
+      <div class="doctor-list__info">
+        <%= link_to doctor.name, doctor, class: "doctor-list__name" %>
+        <div class="doctor-list__address">
+          <%= simple_format doctor.location %>
+        </div>
+        <div class="doctor-list__rating">
+          ★ <%= doctor.rating.round(2) %>
+        </div>
+      </div>
+      <div class="doctor-list__actions">
+        <%= button_to "Make an Appointment", new_appointment_path, method: :get, class: "button" %>
+      </div>
+    </li>
+  <% end %>
+</ul>

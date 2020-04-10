@@ -1,0 +1,38 @@
+<section class="profile">
+  <div class="profile__info">
+    <h2>
+      <%= @pet.name %>'s Profile
+    </h2>
+
+    <p>
+      Age: <%= @pet.age %>
+    </p>
+
+    <p>
+      Breed: <%= @pet.breed %>
+    </p>
+    
+    <%= button_to "Edit Profile", edit_pet_path(@pet), method: :get, class: "button" %>
+
+    <%= button_to "Delete Account", @pet, method: :delete, class: "button" %>
+  </div>
+  <div class="profile__appointments">
+    <h3>Appointments</h3>
+
+    <% if @pet.appointments.length == 0 %>
+
+      <p>This pet has no appointments</p>
+
+    <% else %>
+
+      <ul>
+        <% @pet.appointments.each do |appointment| %>
+          <li>
+            <%= appointment.time %> with <%= link_to appointment.doctor.name, appointment.doctor %>
+          </li>
+        <% end %>
+      </ul>
+
+    <% end %>
+  </div>
+</section>

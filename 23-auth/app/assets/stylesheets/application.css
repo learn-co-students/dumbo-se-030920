@@ -1,0 +1,338 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ :root {
+   --theme-primary: rgb(255, 240, 75);
+   --background-color: #F6F6F6;
+   --font-color: #00224B;
+ }
+
+ /* mini reset */
+ * {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* layout */
+body {
+  font-family: 'Average Sans', sans-serif;
+  background-color: var(--background-color);
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+main {
+  margin-top: 2rem;
+}
+
+hr {
+  border-bottom: 1px dotted var(--font-color);
+  margin: 1rem 0;
+}
+
+/* menu */
+.menu {
+  background-color: var(--theme-primary);
+  color: var(--font-color);
+}
+
+.menu .container,
+.menu nav {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+}
+
+.menu .logo {
+  flex: 0 0 auto;
+}
+
+.menu .item {
+  flex: 0 0 auto;
+  margin: 0 1rem;
+}
+
+.menu a.item,
+.profile a {
+  border-bottom: 1px dotted var(--font-color);
+}
+
+.menu a.item:hover,
+.profile a:hover {
+  border-bottom: 1px solid var(--font-color);
+}
+
+.menu .right {
+  margin-left: auto;
+  display: flex;
+}
+
+/* headings */
+.heading {
+  margin: 1em auto 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+/* responsive width */
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 899px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    width: 800px;
+  }
+}
+
+/* forms */
+.form {
+  width: 100%;
+  padding-bottom: 1rem;
+  background-color: var(--background-color);
+}
+
+.form-header {
+  background-color: var(--font-color);
+  color: white;
+  padding: 1rem;
+}
+
+.form label {
+  display: block;
+  font-size: 0.8em;
+  font-weight: 700;
+  margin: 1rem 1.5rem 0.25rem;
+}
+
+.form input, 
+.form select,
+.form textarea {
+  width: calc(100% - 2rem);
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  background-color: white;
+}
+
+.form select {
+  outline: 0;
+  background-color: white;
+  border-radius: 0;
+	line-height:normal;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-ms-appearance:none;
+	appearance:none;
+}
+
+.form input[type=checkbox],
+.form input[type=submit] {
+  width: auto;
+}
+
+.form label.checkbox {
+  display: initial;
+}
+
+.form .button {
+  margin-top: 2em;
+}
+
+/* buttons */
+.button,
+.form .button,
+.card .form .button {
+  cursor: pointer;
+  background-color: var(--theme-primary);
+  color: var(--font-color);
+  font-size: 13px;
+  padding: 0.5em 1.5em;
+  transition: all 0.2s ease;
+  margin-right: 1em;
+}
+
+.button:hover,
+.form .button:hover,
+.card .form .button:hover {
+  background-color: var(--font-color);
+  color: white;
+}
+
+.button_to {
+  display: inline-block;
+  padding: 1em 0;
+}
+
+/* doctor list */
+.doctor-list {
+  list-style: none;
+  background-color: white;
+  box-shadow: rgba(160, 160, 160, 0.45) 0px 1px 3px 0px, rgba(0, 0, 0, 0.08) 0px 0px 3px 0px;
+}
+
+.doctor-list__item {
+  display: flex;
+  margin: 1rem 0;
+  padding: 1rem 0;
+}
+
+.doctor-list__item:not(:first-child) {
+  border-top: 1px solid #c7c7c7;
+} 
+
+.doctor-list__image {
+	margin-right: 1rem;
+}
+
+.doctor-list__image img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.doctor-list__info {
+  padding: 0 1em;
+  font-weight: lighter;
+  font-size: 13px;
+  width: 40%;
+}
+
+.doctor-list__actions {
+  display: flex;
+  align-items: center;
+}
+
+.doctor-list__name {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.doctor-list__rating {
+  color: #FF6473;
+}
+
+/* info page */
+.doctor-info {
+  display: flex;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  background-color: white;
+  box-shadow: rgba(160, 160, 160, 0.45) 0px 1px 3px 0px, rgba(0, 0, 0, 0.08) 0px 0px 3px 0px;
+}
+
+.doctor-info__image {
+  flex: 0 1 33%;
+  padding: 0 1rem;
+}
+
+.doctor-info__image img {
+  width: 100%;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.doctor-info__main {
+  flex: 1 1 auto; 
+}
+
+.doctor-info__main p {
+  font-weight: lighter;
+}
+
+/* profile */
+.profile {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.profile .profile__info {
+  flex: 0 1 calc(60% - 1rem);
+  background-color: white;
+  height: 100%;
+  padding: 1rem;
+  box-shadow: rgba(160, 160, 160, 0.45) 0px 1px 3px 0px, rgba(0, 0, 0, 0.08) 0px 0px 3px 0px;
+}
+
+.profile .profile__info p {
+  line-height: 1.5em;
+  font-weight: lighter;
+}
+
+.profile .profile__appointments {
+  flex: 0 1 calc(40% - 1rem);
+  background-color: white;
+  box-shadow: rgba(160, 160, 160, 0.45) 0px 1px 3px 0px, rgba(0, 0, 0, 0.08) 0px 0px 3px 0px;
+}
+
+.profile .profile__appointments h3 {
+  background-color: var(--font-color);
+  color: white;
+  padding: 1rem;
+}
+
+.profile .profile__appointments ul {
+  list-style: none;
+  padding: 1rem;
+}
+
+.profile .profile__appointments ul li {
+  font-weight: lighter;
+  padding: 0.75rem 0;
+}
+
+.profile .profile__appointments ul li:not(:first-child) {
+  border-top: 1px solid lightblue;
+}
+
+/* cards */
+.card {
+  box-shadow: rgba(160, 160, 160, 0.45) 0px 1px 3px 0px, rgba(0, 0, 0, 0.08) 0px 0px 3px 0px;
+}
+
+.card .form {
+  background-color: white;
+}
+
+.card .form input, 
+.card .form select,
+.card .form textarea {
+  background-color: var(--background-color);
+}
+
+.card .form select {
+  background-color: var(--background-color);
+}
+
+/* alert messages */
+.error {
+  color: #D93025;
+}

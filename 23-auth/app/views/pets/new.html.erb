@@ -1,0 +1,27 @@
+<div class="card">
+  <%= form_for @pet, html: { class: "form" } do |f| %>
+    <h2 class="form-header">Sign Up</h2>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+
+    <%= f.label :breed %>
+    <%= f.text_field :breed %>
+
+    <% if flash[:errors] %>
+      <ul>
+        <% flash[:errors].each do |error| %>
+          <li class="error"><%= error %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <%= f.submit "Sign Up", class: "button" %>
+  <% end %>
+</div>

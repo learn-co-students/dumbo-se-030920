@@ -6,9 +6,9 @@
   <%= label_tag :password %>
   <%= password_field_tag :password %>
 
-  <% if flash[:errors] %>
+  <% if flash[:error] %>
     <ul>
-        <li class="error"><%= flash[:errors] %></li>
+        <li class="error"><%= flash[:error] %></li>
     </ul>
   <% end %>
 

@@ -31,7 +31,7 @@ class PetsController < ApplicationController
     if @pet && @pet.authenticate(params[:password])
       redirect_to @pet
     else
-      flash[:errors] = "Invalid username or password"
+      flash[:error] = "Invalid username or password"
       redirect_to pet_login_path
     end
   end

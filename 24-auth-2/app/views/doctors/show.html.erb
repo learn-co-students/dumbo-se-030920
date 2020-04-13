@@ -1,0 +1,31 @@
+<section class="doctor-info">
+  <div class="doctor-info__image">
+    <%= image_tag @doctor.image_url %>
+  </div>
+  <div class="doctor-info__main">
+    <h1>
+      <%= @doctor.name %>
+    </h1>
+    <p>
+      <%= simple_format @doctor.location %>
+    </p>
+    <div class="doctor-list__rating">
+      ★ <%= @doctor.rating.round(2) %>
+    </div>
+    <hr>
+    <%= form_for @new_appointment, html: { class: "form" } do |f| %>
+      <h4 class="form-header">Make Appointment</h4>
+
+      <%= f.hidden_field :doctor_id, value: @doctor.id %>
+
+      <%= f.label :time %>
+      <%= f.text_field :time %>
+
+      <%= f.label :pet_id %>
+      <%= f.collection_select :pet_id, @all_pets, :id, :name %>
+
+      <%= f.submit "Make Appointment", class: "button" %>
+
+    <% end %>
+  </div>
+</section>

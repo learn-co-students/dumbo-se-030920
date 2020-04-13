@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CrocDoc</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="menu">
+      <div class="container">
+        <nav class="logo">
+          <h2>CrocDoc</h2>
+        </nav>
+        <nav class="right">
+          <%= link_to "Find a Doctor", doctors_path, class: "item" %>
+          <span class="item">
+            Welcome, User!
+          </span>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </main>
+  </body>
+</html>

@@ -9,9 +9,6 @@
     <%= f.label :doctor_id %>
     <%= f.collection_select :doctor_id, @doctors, :id, :name %>
     
-    <%= f.label :pet_id %>
-    <%= f.collection_select :pet_id, @pets, :id, :name %>
-
     <% if flash[:errors] %>
       <ol>
         <% flash[:errors].each do |err| %>
@@ -22,5 +19,5 @@
 
     <%= f.submit class: "button" %>
   <% end %>
-  
+
 </div>

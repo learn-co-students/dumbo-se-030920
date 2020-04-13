@@ -28,4 +28,11 @@ class Pet < ApplicationRecord
 
 
   # 3. Pet age must be greater than 4 months
+  def screaming_name
+    self.name.upcase
+  end
+
+
+
+
 end

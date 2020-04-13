@@ -19,7 +19,14 @@
         <nav class="right">
           <%= link_to "Find a Doctor", doctors_path, class: "item" %>
           <span class="item">
-            Welcome, User!
+
+            <% if logged_in? %>
+              Welcome, <%= logged_in_user.name %>!
+              <%= button_to "Log out", "/logout" %>
+            <% else %>
+              <%= link_to "Log In", pet_login_path %>
+            <% end %>
+
           </span>
         </nav>
       </div>

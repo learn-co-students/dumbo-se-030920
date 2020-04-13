@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   get '/pets/login', to: 'pets#loginform', as: 'pet_login'
   post '/pets/login', to: 'pets#handle_login'
+  post '/logout', to: 'pets#logout'
+
+
+
 
   get "/doctors", to: 'doctors#index', as: "doctors" # index
   get "/doctors/:id", to: 'doctors#show', as: "doctor" # index

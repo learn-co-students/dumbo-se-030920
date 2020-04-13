@@ -1,5 +1,6 @@
 class PetsController < ApplicationController
   before_action :set_pet, only: [:show, :edit, :update, :destroy]
+  before_action :check_to_see_if_someones_logged_in, only: [:edit, :update, :destroy]
 
   def index
     @pets = Pet.all
@@ -14,6 +15,7 @@ class PetsController < ApplicationController
   def create
     pet = Pet.create(pet_params)
     if pet.valid?
+      session[:pet_id] = pet.id
       redirect_to pet
     else
       flash[:errors] = pet.errors.full_messages
@@ -29,6 +31,7 @@ class PetsController < ApplicationController
   def handle_login
     @pet = Pet.find_by(name: params[:username])
     if @pet && @pet.authenticate(params[:password])
+      session[:pet_id] = @pet.id
       redirect_to @pet
     else
       flash[:error] = "Invalid username or password"
@@ -37,18 +40,19 @@ class PetsController < ApplicationController
   end
 
 
-
-
-
-
-
-
+  def logout
+    session[:pet_id] = nil
+    redirect_to pet_login_path
+  end
 
 
   def show
   end
 
   def edit
+    unless @logged_in_user.id == @pet.id
+      redirect_to @logged_in_user
+    end
   end
 
   def update

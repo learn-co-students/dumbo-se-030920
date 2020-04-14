@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  old_id: 1
+  young_id: 1
+
+two:
+  old_id: 1
+  young_id: 1

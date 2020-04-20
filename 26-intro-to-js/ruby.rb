@@ -2,8 +2,8 @@ require 'pry'
 
 arr = [1,2,3,4]
 
-def is_it_even(arr_argument)
-  if arr_argument.length.even?
+def is_it_even(first_arg)
+  if first_arg.length.even?
     puts "It is even."
   else
     puts "It is odd."

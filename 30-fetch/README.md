@@ -11,6 +11,23 @@
 * How can I work with the promise that fetch returns?
 * How can I update the DOM based on the JSON I have fetched?
 
+Asynchronous
+JavaScript
+and
+XML
+
+
+Extensive Markup Language
+
+JSON - Javascript object notation
+
+
+
+
+
+
+
+
 - [`Promises`][mdn-promises] are another way of writing asynchronous code
 
 ## What is a Promise?

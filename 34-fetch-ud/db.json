@@ -1,0 +1,21 @@
+{
+  "to_do_items": [
+    {
+      "title": "Make Fetch Happen",
+      "done": false,
+      "id": 1
+    },
+    {
+      "title": "Learn to Love Javascript",
+      "done": true,
+      "id": 2
+    }
+  ],
+  "snacks": [
+    {
+      "id": 1,
+      "name": "Cinnamon",
+      "yumminess": 5
+    }
+  ]
+}

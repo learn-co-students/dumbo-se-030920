@@ -32,7 +32,7 @@ function turnTodoToLi(todo){
   // 1) Creating the outer box
   // 2) Fill the contents of that box
   let todoLi = formatAndReturnTheHTML(todo)
-  
+
 
   // 3) Append the box to the page
   todoList.append(todoLi)
@@ -109,7 +109,6 @@ function updateHelper(todo, todoLi){
       console.log(updatedObj);
       // {title: "Make Fetch Happen", done: true, id: 1}
       todo.done = updatedObj.done
-
 
       if (updatedObj.done === true) {
         todoLi.classList.add("done")

@@ -7,8 +7,33 @@
     },
     {
       "title": "Learn to Love Javascript",
-      "done": false,
+      "done": true,
       "id": 2
+    },
+    {
+      "title": "Eat chicken",
+      "done": false,
+      "id": 3
+    },
+    {
+      "title": "Go bike",
+      "done": false,
+      "id": 4
+    },
+    {
+      "title": "Walk",
+      "done": false,
+      "id": 5
+    },
+    {
+      "title": "Run a marathon",
+      "done": false,
+      "id": 6
+    },
+    {
+      "title": "Walk a marathon",
+      "done": false,
+      "id": 7
     }
   ],
   "snacks": [
@@ -16,11 +41,6 @@
       "id": 1,
       "name": "Cinnamon",
       "yumminess": 5
-    },
-    {
-      "id": 2,
-      "name": "Peanut Butter",
-      "yumminess": 10
     }
   ]
 }

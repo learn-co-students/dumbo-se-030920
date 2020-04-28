@@ -3,6 +3,46 @@ let quotesUL = document.querySelector("#quote-list")
 let newQuoteForm = document.querySelector("#new-quote-form")
 
 
+// DELEGATION
+
+// quotesUL.addEventListener("click", (evt) => {
+//
+//   if (evt.target.classList.contains("btn-danger")) {
+//     // evt.target is always the deleteButton
+//     let quoteLi = evt.target.parentNode.parentNode
+//     let quote_id = quoteLi.dataset.chicken
+//     fetch(`http://localhost:3000/quotes/${quote_id}`, {
+//       method: "DELETE"
+//     })
+//       .then(r => r.json())
+//       .then((emptyObj) => {
+//         quoteLi.remove()
+//       })
+//   }
+//
+//   if(evt.target.tagName === "SPAN" || evt.target.classList.contains("btn-success")){
+//     let quoteLi = evt.target.parentNode.parentNode
+//     let quote_id = quoteLi.dataset.chicken
+//
+//     let likeSpan = quoteLi.querySelector("span")
+//
+//     fetch('http://localhost:3000/likes', {
+//         method: "POST",
+//         headers: {
+//           'content-type': 'application/json'
+//         },
+//         body: JSON.stringify({
+//           quoteId: parseInt(quote_id)
+//         })
+//       })
+//       .then(r => r.json())
+//       .then((newlyCreatedLike) => {
+//         likeSpan.innerText = parseInt(likeSpan.innerText) + 1
+//       })
+//   }
+// })
+
+
 newQuoteForm.addEventListener("submit", (evt) => {
   evt.preventDefault()
 
@@ -52,6 +92,7 @@ function renderQuote(quote){
 
   let quoteLi = document.createElement("li")
     quoteLi.classList.add("quote-card")
+    quoteLi.dataset.chicken = quote.id
 
   quoteLi.innerHTML = `<blockquote class="blockquote">
       <p class="mb-0">${quote.quote}</p>
@@ -84,8 +125,6 @@ function renderQuote(quote){
   })
   // END OF DELETE EVT LISTENER
 
-
-
   let likeButton = quoteLi.querySelector(".btn-success")
   let likeSpan = quoteLi.querySelector("span")
 
@@ -110,25 +149,5 @@ function renderQuote(quote){
 
   })
   // END OF LIKE EVT LISTENER
-
-
-
 }
 // END OF RENDERQUOTE
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//

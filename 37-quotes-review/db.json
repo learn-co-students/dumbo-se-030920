@@ -46,11 +46,6 @@
       "author": "Sonia Sotomayor"
     },
     {
-      "quote": "Read the README, PLEASEEEEE",
-      "author": "Eric",
-      "id": 11
-    },
-    {
       "quote": "Read the README, PLEASEEEEE!!!!!",
       "author": "Eric",
       "id": 12
@@ -147,22 +142,6 @@
       "id": 22
     },
     {
-      "quoteId": 11,
-      "id": 23
-    },
-    {
-      "quoteId": 11,
-      "id": 24
-    },
-    {
-      "quoteId": 11,
-      "id": 25
-    },
-    {
-      "quoteId": 11,
-      "id": 26
-    },
-    {
       "quoteId": 10,
       "id": 27
     },
@@ -177,6 +156,90 @@
     {
       "quoteId": 10,
       "id": 30
+    },
+    {
+      "quoteId": 2,
+      "id": 31
+    },
+    {
+      "quoteId": 2,
+      "id": 32
+    },
+    {
+      "quoteId": 2,
+      "id": 33
+    },
+    {
+      "quoteId": 2,
+      "id": 34
+    },
+    {
+      "quoteId": 2,
+      "id": 35
+    },
+    {
+      "quoteId": 2,
+      "id": 36
+    },
+    {
+      "quoteId": 2,
+      "id": 37
+    },
+    {
+      "quoteId": 2,
+      "id": 38
+    },
+    {
+      "quoteId": 2,
+      "id": 39
+    },
+    {
+      "quoteId": 2,
+      "id": 40
+    },
+    {
+      "quoteId": 2,
+      "id": 41
+    },
+    {
+      "quoteId": 2,
+      "id": 42
+    },
+    {
+      "quoteId": 2,
+      "id": 43
+    },
+    {
+      "quoteId": 2,
+      "id": 44
+    },
+    {
+      "quoteId": 2,
+      "id": 45
+    },
+    {
+      "quoteId": 2,
+      "id": 46
+    },
+    {
+      "quoteId": 2,
+      "id": 47
+    },
+    {
+      "quoteId": 2,
+      "id": 48
+    },
+    {
+      "quoteId": 2,
+      "id": 49
+    },
+    {
+      "quoteId": 2,
+      "id": 50
+    },
+    {
+      "quoteId": 2,
+      "id": 51
     }
   ]
 }

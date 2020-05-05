@@ -1,8 +1,9 @@
-let addToy = false
-const addBtn = document.querySelector('#new-toy-btn')
-const toyFormContainer = document.querySelector('.container')
-let toyCollectionDiv = document.getElementById('toy-collection')
-let toyForm = document.querySelector(".add-toy-form")
+getAllToyBoxes()
+  .then((toyboxes) => {
+    toyboxes.forEach((toyboxObj) => {
+      new Toybox(toyboxObj)
+    })
+  })
 
 
 addBtn.addEventListener('click', () => {

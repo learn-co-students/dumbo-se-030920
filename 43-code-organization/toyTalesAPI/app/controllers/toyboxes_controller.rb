@@ -4,4 +4,5 @@ class ToyboxesController < ApplicationController
     @toyboxes = Toybox.all
     render json: @toyboxes, include: :toys
   end
+  
 end

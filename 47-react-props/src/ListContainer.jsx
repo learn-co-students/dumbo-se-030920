@@ -1,15 +1,25 @@
 import React from 'react'
 import List from './List'
 
+// Responsible Parent
+  // You get what you get, and you don't get upset 
+let ListContainer = (props) => {
 
-let ListContainer = () => {
+  console.log("LIST CONTAINER PROPS", props)
 
   return(
     <>
-      <h2>List of Lists</h2>
+      <h2>{props.title}</h2>
       <ul>
-        <List></List>
-        <List />
+        <List
+          name={"Songs to Jam Out To"}
+          itemsArr={[]}
+          obj={{}}
+          boolean={false}
+          number={37}
+          funcDef={() => {}}
+        />
+        <List name="Recipes to Cook"/>
       </ul>
     </>
   )

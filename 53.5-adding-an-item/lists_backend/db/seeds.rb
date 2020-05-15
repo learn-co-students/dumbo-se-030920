@@ -1,0 +1,10 @@
+l1 = List.create(list_name: "To Do List", contributions: rand(20))
+  l1.items.create(name: "Like React")
+  l1.items.create(name: "Do CRUD")
+  l1.items.create(name: "Make better lists")
+
+l2 = List.create(list_name: "Chickens that won an Oscar", contributions: rand(100))
+  l2.items.create(name: "Chicken Little")
+  l2.items.create(name: "Foghorn Leghorn")
+  l2.items.create(name: "Chicken Joe")
+  l2.items.create(name: "HeiHei")

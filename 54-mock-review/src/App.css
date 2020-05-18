@@ -1,0 +1,216 @@
+.App {
+  text-align: center;
+  font-family: "papyrus";
+  border-radius: 5%
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 5s linear;
+  height: 20vmin;
+  position: relative;
+}
+
+.App-header {
+  background-color:	#547192;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: #e3c06c;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+main {
+  padding-top: 1rem;
+}
+
+span {
+  font-weight: bold;
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  justify-content: center;
+}
+
+.card {
+  background: linear-gradient(to bottom right, #330066, #5c00e6, #0000cc, #330066);
+  box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.36);
+  border: solid black 1px;
+  padding: 5px;
+  width: 25%;
+  margin: 2rem;
+  border-radius: 5%;
+
+}
+
+.decorative {
+  border-radius: 4px;
+  border: 1px black;
+  box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.36);
+  padding: 5px;
+}
+
+.Gryffindor{
+  background: linear-gradient(to bottom right, #7F0909, #FFC500);
+}
+
+.Slytherin{
+  background: linear-gradient(to bottom right, #0D6217, #AAA);
+}
+
+.Hufflepuff{
+  background: linear-gradient(to bottom right, #EEE117, #000);
+}
+
+.Ravenclaw{
+  background: linear-gradient(to bottom right, #000A90, #946B2D);
+}
+
+.top {}
+
+.name {
+  border: solid black 2px;
+  border-radius: 4px;
+  background-color: rgba(77, 51, 25, 0.3);
+  color: white;
+  display: inline-block;
+  padding: 11px;
+  box-sizing: border-box;
+}
+
+.top img {
+  max-width: 100%;
+  border-radius: 4px;
+  box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.17);
+  border: solid black 2px;
+  margin: 5px;
+}
+
+.card_bottom {
+  border: solid black 2px;
+  border-radius: 5%;
+  box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.17);
+  padding: 2px;
+  margin: 7px;
+  color: white;
+  background-color: rgba(77, 51, 25, 0.69);
+}
+
+.card_bottom button {
+  box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background-color:#e4685d;
+	border-radius:4px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+
+
+.house_name {
+  font-style: italic;
+}
+
+h3.name {
+  color: white;
+  font-size: 20px;
+  padding-top: 2px;
+  text-align: center;
+  height: 26px;
+}
+
+.name h3 {
+  font-size: 25px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+.new_container [type=text],
+.new_container [type=url],
+select {
+  display: block;
+  padding: .5rem;
+  background: transparent;
+  vertical-align: middle;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #cdcdcd;
+  font-size: .95rem;
+}
+
+.new_container [type=text]:focus,
+.new_container [type=url]:focus,
+select:focus {
+  outline: none;
+  border: 1px solid #1E6BD6;
+}
+
+select#map {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.new_container select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAvklEQVQoFY2QMQqEMBBFv7ERa/EMXkGw11K8QbDXzuN4BHv7QO6ifUgj7v4UAdlVM8Uwf+b9YZJISnlqrfEUZVlinucnBGKaJgghbiHOyLyFKIoCbdvecpyReYvo/Ma2bajrGtbaC58kCdZ1RZ7nl/4/4d5EsO/7nzl7IUtodBexMMagaRrs+06JLMvcNWmaOv2W/C/TMAyD58dxROgSmvxFFMdxoOs6lliWBXEcuzokXRbRoJRyvqqqQvye+QDMDz1D6yuj9wAAAABJRU5ErkJggg==) 100% no-repeat;
+  line-height: 1
+}
+
+.card select {
+  color: white;
+}
+
+.new_container label {
+  font-weight: 600;
+  font-size: .9rem;
+  display: block;
+  margin: .5rem 0;
+}
+
+.new_container {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.new_container [type=submit] {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  margin: .25rem 0;
+  padding: .5rem 1rem;
+  border: 1px solid	#e3c06c;
+  border-radius: 18px;
+  background:	#547192;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: .95rem;
+}

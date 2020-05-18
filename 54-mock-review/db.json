@@ -1,0 +1,52 @@
+{
+  "wizards": [
+    {
+      "id": 1,
+      "name": "Harry Potter",
+      "wand": "Phoenix Feather",
+      "house": "Gryffindor",
+      "image1": "http://www.univers-series.com/wp-content/uploads/2016/02/harrypotter.jpeg",
+      "image2": "https://img1.looper.com/img/uploads/2019/02/harry-potter.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Hermione Granger",
+      "wand": "Dragon Heartstring",
+      "house": "Gryffindor",
+      "image1": "https://wallpapersite.com/images/pages/pic_w/8936.jpg",
+      "image2": "https://vignette.wikia.nocookie.net/harrypotter/images/7/7e/Hermione-HBP-hermione-granger-16048675-1919-2560.jpg/revision/latest?cb=20140628051753"
+    },
+    {
+      "id": 3,
+      "name": "Ron Weasley",
+      "wand": "Unicorn Tail Hair",
+      "house": "Gryffindor",
+      "image1": "http://images4.fanpop.com/image/photos/23000000/DH-Part-II-ronald-weasley-23081519-500-296.jpg",
+      "image2": "https://images.pottermore.com/bxd3o8b291gf/4kRGmTOvVYmIwsOikwcuUw/8b8f2e4ffcc1a5218bafe615f976abb0/Ron_Weasley_WB_F1_Ron_with_Scabbers_on_shoulder_00393692.jpg?w=1200"
+    },
+    {
+      "id": 4,
+      "name": "Draco Malfoy",
+      "wand": "Unicorn Tail Hair",
+      "house": "Slytherin",
+      "image1": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/11/23/09/malfoy.0.0.jpg?w968h681",
+      "image2": "https://qph.fs.quoracdn.net/main-qimg-0f9603b2605dce5b8dfb6d27028b02ab"
+    },
+    {
+      "id": 5,
+      "name": "Severus Snape",
+      "wand": "Dragon Heartstring",
+      "house": "Slytherin",
+      "image1": "https://vignette.wikia.nocookie.net/villains/images/1/12/Snape-will-never-die-severus-snape-22970808-1600-2118.jpg/revision/latest?cb=20170304205903",
+      "image2": "https://vignette.wikia.nocookie.net/harrypotter/images/a/a3/Severus_Snape.jpg/revision/latest?cb=20150307193047"
+    },
+    {
+      "id": 6,
+      "name": "Minerva McGonagall",
+      "wand": "Dragon Heartstring",
+      "house": "Gryffindor",
+      "image1": "https://fsmedia.imgix.net/21/fd/33/16/2844/4ec3/bae9/57d38001e216/sonserina.jpeg?rect=0%2C0%2C1920%2C959&dpr=2&auto=format%2Ccompress&w=650",
+      "image2": "https://img1.looper.com/img/gallery/professor-mcgonagalls-entire-backstory-explained/intro-1582830670.jpg"
+    }
+  ]
+}

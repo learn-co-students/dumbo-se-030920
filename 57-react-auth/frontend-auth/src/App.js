@@ -6,6 +6,10 @@ import Home from './components/Home'
 import ProfileContainer from './ProfileComponents/ProfileContainer'
 
 import {withRouter} from 'react-router-dom'
+// withRouter is a function that takes in a function and returns a function
+  // withRouter is a component that takes in a component and returns a component
+  // Higher Ordered Component/Higher Ordered Functions
+
 
 class App extends React.Component {
 
@@ -20,7 +24,15 @@ class App extends React.Component {
 
   handleLoginSubmit = (userInfo) => {
     console.log("Login form has been submitted")
-
+    fetch("http://localhost:4000/users/login", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify(userInfo)
+    })
+    .then(r => r.json())
+    .then(this.handleResponse)
   }
 
 
@@ -35,15 +47,21 @@ class App extends React.Component {
       body: JSON.stringify(userInfo)
     })
       .then(r => r.json())
-      .then((resp) => {
-        if (resp.id) {
-          this.setState({
-            user: resp
-          })
-        } else {
-          alert(resp.message)
-        }
+      .then(this.handleResponse)
+  }
+
+
+  handleResponse = (resp) => {
+    if (resp.id) {
+      this.setState({
+        user: resp
+      }, () => {
+        this.props.history.push("/profile")
+        // Changing the URL to localhost:3000/profile
       })
+    } else {
+      alert(resp.message)
+    }
   }
 
 
@@ -61,11 +79,20 @@ class App extends React.Component {
     }
   }
 
+
+
+
   renderProfile = (routerProps) => {
-    return <ProfileContainer />
+    return <ProfileContainer user={this.state.user}/>
   }
 
+
+
+
+
+
   render(){
+    console.log(this.props, "APP PROPS");
     return (
       <div className="App">
         <NavBar/>
@@ -82,7 +109,8 @@ class App extends React.Component {
 
 }
 
-export default App
+let MagicalComponent = withRouter(App)
+export default MagicalComponent
 
 
 

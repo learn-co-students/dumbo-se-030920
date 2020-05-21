@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Snack = () => {
+const Snack = (props) => {
   return(
-    <li>{}</li>
+    <li>{props.snack.name}</li>
   )
 };
 

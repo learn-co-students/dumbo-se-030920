@@ -1,0 +1,11 @@
+ul {
+  list-style: none;
+}
+
+li {
+  border: 2px dotted red;
+}
+
+.App {
+  text-align: center;
+}
